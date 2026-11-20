@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Cache-Control" content="no-cache">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ page.title }}</title>
 <meta name="description" content="{{ page.description }}">
@@ -9,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Electrician","name":"Service Plus Electrical Solutions","telephone":"{{ site.data.business.phone }}","foundingDate":"2011","address":{"@type":"PostalAddress","addressLocality":"Hutchinson","addressRegion":"KS","addressCountry":"US"},"areaServed":"South-central Kansas"}
 </script>
@@ -55,7 +56,28 @@
   </div>
   <div class="legal"><span>© <span id="year"></span> Service Plus Electrical Solutions LLC</span><span>Concept design by Travis Cloke · Apex Vector LLC</span></div>
 </div></footer>
+<dialog class="quote-modal" id="quote-modal" aria-labelledby="qm-title">
+  <button class="qm-close" type="button" aria-label="Close">&times;</button>
+  <span class="eyebrow" style="color:var(--copper)">Free quote</span>
+  <h2 id="qm-title">Request a quote</h2>
+  <p class="qm-sub">Tell us what's going on. For anything urgent, call <a href="tel:{{ site.data.business.phone_link }}">{{ site.data.business.phone }}</a>.</p>
+  <form class="quote" novalidate>
+    <div class="row2">
+      <div class="field"><label for="m-name">Name *</label><input id="m-name" name="name" required autocomplete="name"></div>
+      <div class="field"><label for="m-phone">Phone *</label><input id="m-phone" name="phone" type="tel" required autocomplete="tel"></div>
+    </div>
+    <div class="row2">
+      <div class="field"><label for="m-town">Town *</label><input id="m-town" name="town" required placeholder="e.g. Hutchinson"></div>
+      <div class="field"><label for="m-svc">Service needed</label><select id="m-svc" name="svc">
+        <option>Troubleshooting / repair</option><option>Panel upgrade</option><option>Rewiring</option><option>Lighting / fixtures</option><option>Outlets / circuits</option><option>Commercial</option><option>Other</option></select></div>
+    </div>
+    <div class="field"><label for="m-msg">What's going on? *</label><textarea id="m-msg" name="msg" rows="4" required></textarea></div>
+    <button class="btn dark" type="submit">Send request</button>
+    <p class="form-note">Concept form — not yet connected.</p>
+    <div class="form-ok" role="status">Thanks! Your request was received. (Demo only — nothing was sent.)</div>
+  </form>
+</dialog>
 <div class="callbar"><a href="tel:{{ site.data.business.phone_link }}">Call Now</a><a href="contact.html">Get a Quote</a></div>
-<script src="{{ '/assets/main.js' | relative_url }}"></script>
+<script src="{{ '/assets/main.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
 </body>
 </html>

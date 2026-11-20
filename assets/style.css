@@ -207,3 +207,14 @@ footer.site .legal{border-top:1px solid #1d2a40;margin-top:36px;padding-top:18px
 .tag{position:absolute;top:-12px;left:22px;background:var(--volt);color:var(--ink);font-weight:700;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:6px}
 .tag.alt-tag{background:var(--ink);color:#fff}
 @media (max-width:900px){.faq-player{grid-template-columns:1fr}}
+
+/* Quote pop-up */
+.quote-modal{border:0;border-radius:var(--radius);padding:30px;width:min(620px,94vw);max-height:92vh;overflow:auto;box-shadow:0 30px 80px rgba(0,0,0,.45);background:var(--paper);color:var(--ink)}
+.quote-modal::backdrop{background:rgba(10,18,32,.72)}
+.quote-modal form.quote{box-shadow:none;padding:0;border:0;background:transparent}
+.quote-modal h2{margin-bottom:6px}
+.qm-sub{color:var(--muted);margin-bottom:18px}
+.qm-sub a{color:var(--copper);font-weight:700}
+.qm-close{position:absolute;top:12px;right:14px;background:none;border:0;font-size:2rem;line-height:1;cursor:pointer;color:var(--muted)}
+.qm-close:hover{color:var(--ink)}
+@media (max-width:620px){.quote-modal{padding:22px}}
