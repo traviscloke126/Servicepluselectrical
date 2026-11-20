@@ -1,0 +1,6 @@
+title: Service Plus Electrical Solutions
+description: Residential and light commercial electrician in Hutchinson, Kansas.
+baseurl: "/servicepluselectrical"   # change to "" if moved to its own domain or a <user>.github.io repo
+url: "https://traviscloke126.github.io"
+markdown: kramdown
+exclude: [README.md]

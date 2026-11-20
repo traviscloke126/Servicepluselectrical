@@ -1,0 +1,11 @@
+# ===== Service Plus Electrical — business details =====
+# Edit these and every page updates. Text in [brackets] still needs real info.
+name: "Service Plus Electrical Solutions"
+phone: "(620) 931-0614"
+phone_link: "+16209310614"     # digits only, used for tap-to-call
+email: "[Email address]"
+hours: "[Business hours]"
+city: "Hutchinson, KS"
+# true = shows the orange CONCEPT banner and hides the site from Google.
+# Set to false when the owner approves and the site goes live.
+concept: true

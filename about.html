@@ -1,0 +1,42 @@
+---
+layout: default
+title: "About | Service Plus Electrical Solutions, Hutchinson KS"
+description: "Service Plus Electrical Solutions has served Hutchinson and south-central Kansas since 2011 with safe, professional, educational and clean electrical work."
+nav: about.html
+---
+
+<section class="page-hero"><div class="wrap">
+  <span class="eyebrow">About</span>
+  <h1>Local electricians since 2011</h1>
+  <p>Based in Hutchinson, Kansas, and built on a simple idea: make homes safer and leave every customer better informed than we found them.</p>
+</div></section>
+
+<section class="block"><div class="wrap grid g2" style="gap:48px;align-items:center">
+  <div>
+    <h2>Our story</h2>
+    <p style="color:var(--muted)">Service Plus Electrical Solutions has served Hutchinson and the surrounding area since 2011, handling residential and light commercial electrical work with an emphasis on high safety standards.</p>
+    <div style="color:var(--muted)">{% capture story %}{% include owner-story.md %}{% endcapture %}{{ story | markdownify }}</div>
+    <p style="color:var(--muted)">We're a small, local team. When you call, you're talking to people who live and work here too.</p>
+  </div>
+  <div class="ph">[Photo: owner and team — company's own photo]</div>
+</div></section>
+
+<section class="block alt" id="values"><div class="wrap">
+  <div class="section-head"><span class="eyebrow" style="color:var(--copper)">What we stand for</span><h2>Four core values</h2></div>
+  <div class="grid g4">
+    <div class="card"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#f5b301" stroke-width="2"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>Safety</h3><p>Every job is done to code, tested, and done without cutting corners.</p></div>
+    <div class="card"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="#f5b301"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg></div><h3>Professionalism</h3><p>Show up when we say, communicate clearly, and treat customers like neighbors — not numbers.</p></div>
+    <div class="card"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#f5b301" stroke-width="2"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></svg></div><h3>Education</h3><p>We explain what we found and what your options are, so you can make the call.</p></div>
+    <div class="card"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#f5b301" stroke-width="2"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg></div><h3>Cleanliness</h3><p>Drop cloths down, debris hauled off, and your home left clean.</p></div>
+  </div>
+</div></section>
+
+<section class="block"><div class="wrap grid g3">
+  <div class="card"><h3>Licensed &amp; insured</h3><p>[Insert license numbers and insurance details for the jurisdictions served.]</p></div>
+  <div class="card"><h3>BBB A+ rated</h3><p>Rated A+ by the Better Business Bureau. [Confirm current rating before publishing.]</p></div>
+  <div class="card"><h3>Now hiring</h3><p>We're looking for licensed electricians who take pride in doing things the right way. <a href="contact.html" style="color:var(--copper);font-weight:700">Get in touch →</a></p></div>
+</div></section>
+<section class="band"><div class="wrap">
+  <div><h2>Something not working right?</h2><p>Flickering lights, a breaker that keeps tripping, or a panel that's seen better days — we'll find the cause.</p></div>
+  <div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn" href="tel:{{ site.data.business.phone_link }}">Call {{ site.data.business.phone }}</a><a class="btn ghost" href="contact.html">Request a Quote</a></div>
+</div></section>

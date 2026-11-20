@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title }}</title>
+<meta name="description" content="{{ page.description }}">
+{% if site.data.business.concept %}<meta name="robots" content="noindex, nofollow">{% endif %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Electrician","name":"Service Plus Electrical Solutions","telephone":"{{ site.data.business.phone }}","foundingDate":"2011","address":{"@type":"PostalAddress","addressLocality":"Hutchinson","addressRegion":"KS","addressCountry":"US"},"areaServed":"South-central Kansas"}
+</script>
+</head>
+<body>
+{% if site.data.business.concept %}<div class="concept"><strong>CONCEPT DESIGN</strong> — a proposed redesign prepared for Service Plus Electrical Solutions. Not the company's official website.</div>{% endif %}
+<div class="topbar"><div class="wrap">
+  <span class="hide-sm">Residential &amp; light commercial electrical · Hutchinson &amp; south-central Kansas</span>
+  <span>Call <a href="tel:{{ site.data.business.phone_link }}">{{ site.data.business.phone }}</a></span>
+</div></div>
+<header class="site"><div class="wrap">
+  <a class="brand" href="index.html"><svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="9" fill="#f5b301"/><path d="M22 6 11 22h7l-2 12 11-16h-7z" fill="#0f1a2b"/></svg><span><b>Service Plus</b><small>Electrical Solutions</small></span></a>
+  <button class="menu-toggle" aria-expanded="false" aria-controls="mainnav">Menu</button>
+  <nav class="main" id="mainnav"><ul><li><a href="{{ '/index.html' | relative_url }}"{% if page.nav == 'index.html' %} aria-current="page"{% endif %}>Home</a></li><li><a href="{{ '/services.html' | relative_url }}"{% if page.nav == 'services.html' %} aria-current="page"{% endif %}>Services</a></li><li><a href="{{ '/about.html' | relative_url }}"{% if page.nav == 'about.html' %} aria-current="page"{% endif %}>About</a></li><li><a href="{{ '/contact.html' | relative_url }}"{% if page.nav == 'contact.html' %} aria-current="page"{% endif %}>Contact</a></li><li><a class="btn" href="contact.html">Get a Quote</a></li></ul></nav>
+</div></header>
+<main>
+{{ content }}
+</main>
+<footer class="site"><div class="wrap">
+  <div class="cols">
+    <div>
+      <a class="brand" href="index.html"><svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="9" fill="#f5b301"/><path d="M22 6 11 22h7l-2 12 11-16h-7z" fill="#0f1a2b"/></svg><span><b>Service Plus</b><small>Electrical Solutions</small></span></a>
+      <p style="margin-top:14px">Residential and light commercial electrical service out of Hutchinson, Kansas, since 2011.</p>
+    </div>
+    <div><h4>Services</h4><ul>
+      <li><a href="services.html#troubleshooting">Troubleshooting &amp; Repair</a></li>
+      <li><a href="services.html#panels">Panel Upgrades</a></li>
+      <li><a href="services.html#rewiring">Older-Home Rewiring</a></li>
+      <li><a href="services.html#commercial">Light Commercial</a></li>
+    </ul></div>
+    <div><h4>Company</h4><ul>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="about.html#values">Our Values</a></li>
+      <li><a href="contact.html">Request a Quote</a></li>
+    </ul></div>
+    <div><h4>Contact</h4><ul>
+      <li><a href="tel:{{ site.data.business.phone_link }}">{{ site.data.business.phone }}</a></li>
+      <li>Hutchinson, KS</li>
+      <li>{{ site.data.business.email }}</li>
+      <li>{{ site.data.business.hours }}</li>
+    </ul></div>
+  </div>
+  <div class="legal"><span>© <span id="year"></span> Service Plus Electrical Solutions LLC</span><span>Concept design by Travis Cloke · Apex Vector LLC</span></div>
+</div></footer>
+<div class="callbar"><a href="tel:{{ site.data.business.phone_link }}">Call Now</a><a href="contact.html">Get a Quote</a></div>
+<script src="{{ '/assets/main.js' | relative_url }}"></script>
+</body>
+</html>
