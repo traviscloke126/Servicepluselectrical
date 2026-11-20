@@ -1,0 +1,9 @@
+# ===== Community program (nonprofit) — concept =====
+# Update these numbers as the program grows; the site shows them automatically.
+# NOTE: the numbers below are SAMPLE figures for the concept — replace with real totals.
+name: "[Program name]"            # e.g. "Safe Homes Program"
+raised: "$15,000"             # e.g. "$15,000"
+homes: "12"                   # homes made safe
+goal: "$25,000"                 # this year's goal
+progress_percent: 60              # 0–100, fills the progress bar (sample value)
+donate_url: "#"                   # link to the donation service (Zeffy, Givebutter, etc.)

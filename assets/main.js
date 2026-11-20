@@ -41,8 +41,24 @@
     document.querySelectorAll('a[href$="contact.html"]').forEach(function (a) {
       if (/quote/i.test(a.textContent)) a.addEventListener('click', open);
     });
-    modal.querySelector('.qm-close').addEventListener('click', function () { modal.close(); });
-    // click on the dark backdrop closes it
-    modal.addEventListener('click', function (e) { if (e.target === modal) modal.close(); });
   }
+
+  // Any element with data-modal="id" opens that pop-up
+  document.querySelectorAll('[data-modal]').forEach(function (el) {
+    var d = document.getElementById(el.getAttribute('data-modal'));
+    if (!d || typeof d.showModal !== 'function') return;
+    el.addEventListener('click', function (e) {
+      e.preventDefault();
+      var ok = d.querySelector('.form-ok'); if (ok) ok.style.display = 'none';
+      d.showModal();
+      var first = d.querySelector('select, input'); if (first) first.focus();
+    });
+  });
+
+  // Close buttons and backdrop clicks for every pop-up
+  document.querySelectorAll('dialog').forEach(function (d) {
+    var x = d.querySelector('.qm-close');
+    if (x) x.addEventListener('click', function () { d.close(); });
+    d.addEventListener('click', function (e) { if (e.target === d) d.close(); });
+  });
 })();

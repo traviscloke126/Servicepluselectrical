@@ -24,7 +24,7 @@
 <header class="site"><div class="wrap">
   <a class="brand" href="index.html"><svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="9" fill="#ec8733"/><path d="M22 6 11 22h7l-2 12 11-16h-7z" fill="#0f1a2b"/></svg><span><b>Service Plus</b><small>Electrical Solutions</small></span></a>
   <button class="menu-toggle" aria-expanded="false" aria-controls="mainnav">Menu</button>
-  <nav class="main" id="mainnav"><ul><li><a href="{{ '/index.html' | relative_url }}"{% if page.nav == 'index.html' %} aria-current="page"{% endif %}>Home</a></li><li><a href="{{ '/services.html' | relative_url }}"{% if page.nav == 'services.html' %} aria-current="page"{% endif %}>Services</a></li><li><a href="{{ '/about.html' | relative_url }}"{% if page.nav == 'about.html' %} aria-current="page"{% endif %}>About</a></li><li><a href="{{ '/faq.html' | relative_url }}"{% if page.nav == 'faq.html' %} aria-current="page"{% endif %}>FAQ</a></li><li><a href="{{ '/contact.html' | relative_url }}"{% if page.nav == 'contact.html' %} aria-current="page"{% endif %}>Contact</a></li><li><a class="btn" href="contact.html">Get a Quote</a></li></ul></nav>
+  <nav class="main" id="mainnav"><ul><li><a href="{{ '/index.html' | relative_url }}"{% if page.nav == 'index.html' %} aria-current="page"{% endif %}>Home</a></li><li><a href="{{ '/services.html' | relative_url }}"{% if page.nav == 'services.html' %} aria-current="page"{% endif %}>Services</a></li><li><a href="{{ '/about.html' | relative_url }}"{% if page.nav == 'about.html' %} aria-current="page"{% endif %}>About</a></li><li><a href="{{ '/faq.html' | relative_url }}"{% if page.nav == 'faq.html' %} aria-current="page"{% endif %}>FAQ</a></li><li><a href="{{ '/community.html' | relative_url }}"{% if page.nav == 'community.html' %} aria-current="page"{% endif %}>Community</a></li><li><a href="{{ '/contact.html' | relative_url }}"{% if page.nav == 'contact.html' %} aria-current="page"{% endif %}>Contact</a></li><li><a class="btn" href="contact.html">Get a Quote</a></li></ul></nav>
 </div></header>
 <main>
 {{ content }}
@@ -45,6 +45,7 @@
       <li><a href="about.html">About Us</a></li>
       <li><a href="about.html#values">Our Values</a></li>
       <li><a href="faq.html">Ask the Electrician</a></li>
+      <li><a href="community.html">Community Program</a></li>
       <li><a href="contact.html">Request a Quote</a></li>
     </ul></div>
     <div><h4>Contact</h4><ul>
@@ -75,6 +76,29 @@
     <button class="btn dark" type="submit">Send request</button>
     <p class="form-note">Concept form — not yet connected.</p>
     <div class="form-ok" role="status">Thanks! Your request was received. (Demo only — nothing was sent.)</div>
+  </form>
+</dialog>
+<dialog class="quote-modal" id="help-modal" aria-labelledby="hm-title">
+  <button class="qm-close" type="button" aria-label="Close">&times;</button>
+  <span class="eyebrow" style="color:var(--copper)">{{ site.data.program.name }}</span>
+  <h2 id="hm-title">Request a home safety repair</h2>
+  <p class="qm-sub">For veterans, disabled residents and seniors. Filling this out for someone else? That's welcome.</p>
+  <form class="quote" novalidate>
+    <div class="field"><label for="h-for">Who is this request for? *</label><select id="h-for" name="for" required><option value="">Choose one</option><option>Myself</option><option>A family member</option><option>A client (caseworker / caregiver)</option></select></div>
+    <div class="row2">
+      <div class="field"><label for="h-name">Your name *</label><input id="h-name" name="name" required autocomplete="name"></div>
+      <div class="field"><label for="h-phone">Phone *</label><input id="h-phone" name="phone" type="tel" required autocomplete="tel"></div>
+    </div>
+    <div class="field"><label>Homeowner is a… (check all that apply)</label>
+      <div class="checks"><label><input type="checkbox" name="grp" value="veteran"> Veteran</label><label><input type="checkbox" name="grp" value="disabled"> Disabled</label><label><input type="checkbox" name="grp" value="senior"> Senior (65+)</label></div></div>
+    <div class="row2">
+      <div class="field"><label for="h-town">Town *</label><input id="h-town" name="town" required></div>
+      <div class="field"><label for="h-age">About how old is the home?</label><select id="h-age" name="age"><option>Not sure</option><option>Before 1950</option><option>1950–1979</option><option>1980–1999</option><option>2000 or newer</option></select></div>
+    </div>
+    <div class="field"><label for="h-msg">What's going on? *</label><textarea id="h-msg" name="msg" rows="4" required placeholder="Flickering lights, a fuse box, outlets that don't work, burning smell…"></textarea></div>
+    <button class="btn dark" type="submit">Send request</button>
+    <p class="form-note">Concept form — not yet connected.</p>
+    <div class="form-ok" role="status">Thank you. Your request was received. (Demo only — nothing was sent.)</div>
   </form>
 </dialog>
 <div class="callbar"><a href="tel:{{ site.data.business.phone_link }}">Call Now</a><a href="contact.html">Get a Quote</a></div>

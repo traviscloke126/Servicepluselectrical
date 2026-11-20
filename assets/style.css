@@ -218,3 +218,35 @@ footer.site .legal{border-top:1px solid #1d2a40;margin-top:36px;padding-top:18px
 .qm-close{position:absolute;top:12px;right:14px;background:none;border:0;font-size:2rem;line-height:1;cursor:pointer;color:var(--muted)}
 .qm-close:hover{color:var(--ink)}
 @media (max-width:620px){.quote-modal{padding:22px}}
+
+/* Community program */
+.split{display:grid;grid-template-columns:1fr 1fr;border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}
+.split-side{padding:40px}
+.split-side ul{color:inherit;padding-left:20px;margin:0 0 22px}
+.split-side li{margin:5px 0}
+.split .need{background:var(--ink);color:#e7ebf2}
+.split .need .eyebrow{color:var(--volt)}
+.split .need h3{color:#fff;font-size:1.7rem}
+.split .give{background:#fff;border:1px solid var(--line);border-left:0}
+.split .give .eyebrow{color:var(--copper)}
+.split .give h3{font-size:1.7rem}
+.split .give p{color:var(--muted)}
+.mini-meter{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:6px 0 16px;font-size:.95rem}
+.mini-meter small{color:var(--muted);font-size:.78rem}
+.bar{height:10px;background:#e6e0d4;border-radius:99px;overflow:hidden;margin:10px 0 6px}
+.bar span{display:block;height:100%;background:var(--volt);border-radius:99px}
+.text-link{margin-left:14px;font-weight:700;color:var(--copper);text-decoration:none}
+.meter{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;margin:20px 0 22px}
+.meter-nums{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;text-align:center}
+.meter-nums b{display:block;font-family:"Barlow Condensed","Arial Narrow",sans-serif;font-size:2rem;color:var(--ink)}
+.meter-nums small{color:var(--muted)}
+.supporters{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
+.supporters .ph{min-height:90px;font-size:.8rem}
+.ba-pair{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px}
+.ba-pair .ph{min-height:130px;font-size:.8rem}
+.ba-who{display:block;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--copper);font-weight:700;margin-bottom:4px}
+.checks{display:flex;gap:18px;flex-wrap:wrap}
+.checks label{font-weight:500;display:flex;gap:6px;align-items:center}
+.checks input{width:auto}
+@media (max-width:900px){.split{grid-template-columns:1fr}.split .give{border-left:1px solid var(--line);border-top:0}}
+@media (max-width:620px){.split-side{padding:26px}.supporters{grid-template-columns:1fr 1fr}.meter-nums b{font-size:1.5rem}}
